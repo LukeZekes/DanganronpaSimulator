@@ -12,24 +12,6 @@ class Character {
         this.isMastermind = false;
     }
 }
-/*
-class Setting {
-    //Commented out areas in setting constructors are from when there were 6 arrays instead of 1 multi-dimensional array
-    constructor(name, areas, startingArea, initialAreas, firstTrialAreas, secondTrialAreas, thirdTrialAreas, fourthTrialAreas, fifthTrialAreas, FTEvents) {
-        this.name = name;
-        this.areas = areas;
-        
-        this.startingArea = startingArea;
-        this.initialAreas = initialAreas;
-        this.firstTrialAreas = firstTrialAreas;
-        this.secondTrialAreas = secondTrialAreas;
-        this.thirdTrialAreas = thirdTrialAreas;
-        this.fourthTrialAreas = fourthTrialAreas;
-        this.fifthTrialAreas = fifthTrialAreas;
-        
-        this.FTEvents = FTEvents;
-    }
-}*/
 
 class Setting {
     constructor(name, startingArea, areas, FTEvents) {
@@ -172,7 +154,32 @@ const allSettings = [
         ["the haunted house", "Nezumi Castle", "the rollercoaster", "the Funhouse"],
         ["Jabberwock Military Base", "the plushie factory", "the warehouse", "Vendor Street", "Sea King Industries"],
         ["Hope's Peak Academy"]
-    ], []),
+    ], [new FTEvent("C1 took a walk on the beach, holding hands with C2.","",),
+new FTEvent("C1 took a walk on the beach with C2.","",),
+new FTEvent("C1 took a walk on the beach by themself.","",),
+new FTEvent("C1, C2 and C3 played hide - and - seek in Jabberwock Park.","",),
+new FTEvent("C1 and C2 had a picnic in Jabberwock Park.","",),
+new FTEvent("C1 spent some time exploring the first island.","",),
+new FTEvent("C1 and C2 teamed up  to search the first island for clues.","",),
+new FTEvent("C1 tried to climb Monokuma Rock.","",),
+new FTEvent("C1 and C2 tried to fly some of the planes at the airport.","",),
+new FTEvent("C1 raided the vending machines at the airport.","",),
+new FTEvent("C1 got some supplies at Rocketpunch Market.","",),
+new FTEvent("C1 grabbed lots of gummy worms from Rocketpunch Market.","",),
+new FTEvent("C1 and C2 hung out at Usami Corral, and looked at the animals.","",),
+new FTEvent("C1 spent some time alone with the animals at Usami Corral.","",),
+new FTEvent("C1 played video games on the arcade machine in the hotel lobby.","",),
+new FTEvent("C1 played against C2 on the arcade machine in the hotel lobby.C1 won!","",),
+new FTEvent("C1 played against C2 on the arcade machine in the hotel lobby.C2 won!","",),
+new FTEvent("C1 ate alone in the hotel restaurant.","",),
+new FTEvent("C1 and C2 met for lunch in the hotel restaurant.","",),
+new FTEvent("C1, C2 and C3 met for lunch in the hotel restaurant.","",),
+new FTEvent("C1 went swimming at Hotel Marai to clear their head.","",),
+new FTEvent("C1, C2 and C3 hung out at Hotel Marai for a few hours.","",),
+new FTEvent("C1 and C2 went swimming at Hotel Marai.","",),
+new FTEvent("C1 volunteered to clean the old hotel building, and looked for clues while they did.","",),
+new FTEvent("C1 and C2 looked for clues in the old hotel building.","",)
+    ]),
 
     new Setting("The Ultimate Academy for Gifted Juveniles", "the gym", [
         ["the student dormitory", "the Shrine of Judgement", "the library", "the game room", "the A/V room", "the gymnasium", "the dining hall",
