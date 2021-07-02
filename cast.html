@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Danganronpa Simulator</title>
+    <link rel="stylesheet" href="indexStyle.css" />
+</head>
+<body>
+    <h1 class="centeredEL" id="title">Danganronpa Simulator</h1>
+    <hr class="black-and-white-line" />
+    <h2 class="centeredEL sectionHeader">The New Residents of <span id="settingText"></span></h2>
+    <ul id="characterList" class="centeredEL"></ul>
+    <button class="centeredEL" id="goButton" onmousedown="this.innerHTML='Puhuhuhuhu'" onmouseup="this.innerHTML='Begin the killing game!'"
+            onclick="location.href='simulation.html';" type="button">
+        Begin the killing game!
+    </button>
+    <script>
+        //Set #settingText element to reflect the current setting
+        document.getElementById("settingText").innerHTML = JSON.parse(sessionStorage.getItem('setting')).name;
+        //Remove all spaces from the character's name and use that to pull character's image (in form FirstnameLastname.png e.g. MakotoNaegi.png)
+        //Bless my beautiful girlfriend for making sure all the file names were standardized even though it may not have been 100% necessary
+        let path = "images/"
+        function getImageSource(name) {
+            let tempStr = "";
+            for (let i = 0; i < name.length; i++) {
+                let currentChar = name.charAt(i);
+                if (currentChar != ' ') {
+                    tempStr += currentChar;
+                }
+            }
+            return (path + tempStr + ".png");
+        }
+        //Add each character's picture and name as list items to the #characterList element
+        let characterList = document.getElementById('characterList');
+        let currentCharacters = JSON.parse(sessionStorage.getItem('currentCharacters'));
+        for (let i = 0; i < currentCharacters.length; i++) {
+            characterList.innerHTML += "<li><img class=\"characterImage\" src=\'" + getImageSource(currentCharacters[i].name) +
+                "\' alt=\'" + currentCharacters[i].name + "\'/> <br />" + currentCharacters[i].name + "</li>";
+            if (i % 2 == 1) {
+                characterList.innerHTML += "<br />";
+            }
+        }
+    </script>
+</body>
+</html>

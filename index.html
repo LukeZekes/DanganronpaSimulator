@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Danganronpa Simulator</title>
+    <link rel="stylesheet" href="indexStyle.css" />
+</head>
+<body>
+    <h1 class="centeredEL" id="title">Danganronpa Simulator</h1>
+    <hr class="black-and-white-line" />
+    <section id="protagonist" class="centeredEL">
+        <h2 class="sectionHeader">Protagonist</h2>
+        <div>
+            <p class="field" id="protagField">???</p>
+        </div>
+    </section>
+    <section id="antagonist" class="centeredEL">
+        <h2 class="sectionHeader">Antagonist</h2>
+        <div>
+            <p class="field" id="antagField">???</p>
+        </div>
+    </section>
+    <section id="support" class="centeredEL">
+        <h2 class="sectionHeader">Support</h2>
+        <div>
+            <p class="field" id="supportField">???</p>
+        </div>
+    </section>
+    <section id="setting" class="centeredEL">
+        <h2 class="sectionHeader">Location</h2>
+        <div>
+            <p class="field" id="settingField">???</p>
+        </div>
+    </section>
+    <button class="centeredEL" id="generateButton" onclick="doRandomGenerate(); document.getElementById('goButton').style.display = 'block';">Randomize</button>
+    <br />
+    <button class="centeredEL" id="goButton" onclick="location.href = 'cast.html';" type="button" style="display:none;">Next</button>
+
+    <script src="Script1.js"></script>
+</body>
+</html>

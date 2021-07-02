@@ -1,0 +1,8 @@
+Motives
+Murders
+Investigations
+Trials
+Random free time events (both location-dependent and independent)
+	-Make sure the only ultimate labs available as locations are ones for living students, that have been unlocked
+	-Maybe give more variations on the classroom explorations?
+Character genders so FTEvents with 'they' or 'their' sound less copy-pasted

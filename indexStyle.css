@@ -1,0 +1,127 @@
+﻿@font-face {
+    font-family: "PlatformEight";
+    src: local(platform_eight), url(platform_eight/platform_eight.ttf);
+}
+
+body {
+    background-color: #6f0000;
+    font-family: PlatformEight;
+    color: white;
+}
+
+.centeredEL {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+h1 {
+    font-size: 300%;
+    letter-spacing: 2px;
+}
+
+main {
+    font-family: initial;
+    font-size: 1.5em;
+    background-color: darkred;
+    border: 1px solid darkred;
+    width: 50%;
+    min-height: 400px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 25px;
+    border-radius: 2px;
+}
+
+hr.black-and-white-line {
+    background: linear-gradient(90deg, white 50%, black 50%);
+    width: 75%;
+    height: 2px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: PlatformEight;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: #dadada;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+    button:hover {
+        background-color: #a9a9a9;
+    }
+
+    button:active {
+        background-color: #121212;
+    }
+
+    button:hover, button:active {
+        color: #ec0000;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+#title {
+    margin: 15px auto 10px auto;
+}
+
+h2.sectionHeader {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.field {
+    margin: 20px auto 20px auto;
+    background-color: #dadada;
+    width: 220px;
+    min-height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.motive {
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.death {
+    color: #F0509A;
+    font-weight: bold;
+}
+
+.investigationTime {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ul#characterList {
+    list-style: none;
+    padding: 0;
+}
+
+    ul#characterList > li {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        display: inline-block;
+        margin-right: 15px;
+        width: 250px;
+    }
+
+img.characterImage {
+    width: 112px;
+}
+
+    img.characterImage.dead {
+        filter: grayscale(80%);
+    }
