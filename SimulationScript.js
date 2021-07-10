@@ -36,7 +36,7 @@ function checkFTEvent(_e) { //The AND operator was behaving weird for some reaso
             else if (!dailyAreas.includes(_e.area)) {
                 return true;
             }
-            
+
         }
     }
     return false;
@@ -101,7 +101,7 @@ function doFTEvent() {
                 _text = _text.replace("C" + x, _character.name);
             } while (_text.indexOf("C" + x) != -1);
         }
-       // console.log(_text);
+        // console.log(_text);
         //Check to see if text has section for randomly generated area
         if (_text.indexOf("[location]") != -1) {
             //If so, pick an area randomly and replace that section in the text with that area
@@ -114,7 +114,7 @@ function doFTEvent() {
             while (_text.includes("[location]")) {
                 _text = _text.replace("[location]", _area);
             }
-          //  console.log(_area);
+            //  console.log(_area);
         }
 
         //Add text to document w/ event
@@ -156,7 +156,7 @@ function doMurder() {
     tempIndex = Math.floor(Math.random() * livingCharacters.length);
     culprit = livingCharacters[tempIndex];
 
-   // console.log("Victim: " + victim.name + "\nCulprit: " + culprit.name);
+    // console.log("Victim: " + victim.name + "\nCulprit: " + culprit.name);
     //How many people find the body and where
     let _location = availableAreas[Math.floor(Math.random() * availableAreas.length)];
     let num = Math.floor(Math.random() * 3) + 1; //Between 1 and 3 people will find the body
@@ -198,8 +198,11 @@ function nextDay() {
     dailyAreas = [];
     window.scrollTo(0, 0);
     if (day == 4) {
-       doMurder();
-       doInvestigation();
+        for (let i = 0; i < Math.random() * 3; i++) {
+            doFTEvent();
+        }
+        doMurder();
+        doInvestigation();
     }
     else {
         if (day == 2) {

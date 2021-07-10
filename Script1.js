@@ -30,26 +30,28 @@ class FTEvent {
     }
 }
 
-var availableFTEvents = [new FTEvent("C1 decided to plot in their room.", "any", 1), new FTEvent("C1 and C2 played cards in C1's room.", "any", 2),
-new FTEvent("C1 and C2 exercised together for a few hours at [location].", "any", 2), new FTEvent("C1 made lunch for C2 and C3.", "any", 3),
-new FTEvent("C1 and C2 hung out at [location]", "any", 2), new FTEvent("C1 caught C2 and C3 chatting alone together in [location].", "any", 3),
-new FTEvent("C1 and C2 discussed hopeful despair and despairing hope for three hours in [location].", "any", 2),
-new FTEvent("C1 took a nap in their room.", "any", 1), new FTEvent("C1 spent some time alone in their room.", "any", 1),
-new FTEvent("C1 panicked in their room.", "any", 1), new FTEvent("C1 visited C2 in their room.", "any", 2),
-new FTEvent("C1 helped C2 recover from a panic attack.", "any", 2), new FTEvent("C1 and C2 delt with some pent up frustration in C1's room.", "any", 1),
-new FTEvent("C1 tried to teach the basics of their talent to C2.", "any", 2), new FTEvent("C1 questioned if they have developed feelings for C2.", "any", 1),
-new FTEvent("C1 spent some time stalking C2.", "any", 1),
-new FTEvent("C1 took C2 to [location] and confessed their feelings. C2 said they felt the same way!", "any", 2),
-new FTEvent("C1 took C2 to [location] and confessed their feelings. They said they didn't feel the same way, but appreciated the honesty.", "any", 2),
-new FTEvent("C1 took C2 to [location] and confessed their feelings. They didn't feel the same way and got freaked out.", "any", 2),
-new FTEvent("C1 and C2 told some bad jokes to ease the mood.", "any", 2),
-new FTEvent("C1, C2, and C3 shit talked Monokuma until he appeared out of nowhere and yelled at them.", "any", 3),
-new FTEvent("C1 and C2 shared stories from their childhood.", "any", 2),
-new FTEvent("C1 and C2 arm wrestled at [location]. C1 managed to beat C2!", "any", 2),
-new FTEvent("C1 and C2 arm wrestled at [location]. C2 overcame C1!", "any", 2),
-new FTEvent("C1 and C2 arm wrestled at [location]. They both struggled for 5 minutes before calling it a tie", "any", 2)
-]
-
+var availableFTEvents = [
+    new FTEvent("C1 decided to plot in their room.", "any", 1), new FTEvent("C1 and C2 played cards in C1's room.", "any", 2),
+    new FTEvent("C1 and C2 exercised together for a few hours at [location].", "any", 2), new FTEvent("C1 made lunch for C2 and C3.", "any", 3),
+    new FTEvent("C1 and C2 hung out at [location]", "any", 2), new FTEvent("C1 caught C2 and C3 chatting alone together in [location].", "any", 3),
+    new FTEvent("C1 and C2 discussed hopeful despair and despairing hope for three hours in [location].", "any", 2),
+    new FTEvent("C1 took a nap in their room.", "any", 1), new FTEvent("C1 spent some time alone in their room.", "any", 1),
+    new FTEvent("C1 panicked in their room.", "any", 1), new FTEvent("C1 visited C2 in their room.", "any", 2),
+    new FTEvent("C1 helped C2 recover from a panic attack.", "any", 2), new FTEvent("C1 and C2 delt with some pent up frustration in C1's room.", "any", 1),
+    new FTEvent("C1 tried to teach the basics of their talent to C2.", "any", 2), new FTEvent("C1 questioned if they have developed feelings for C2.", "any", 1),
+    new FTEvent("C1 spent some time stalking C2.", "any", 1),
+    new FTEvent("C1 took C2 to [location] and confessed their feelings. C2 said they felt the same way!", "any", 2),
+    new FTEvent("C1 took C2 to [location] and confessed their feelings. They said they didn't feel the same way, but appreciated the honesty.", "any", 2),
+    new FTEvent("C1 took C2 to [location] and confessed their feelings. They didn't feel the same way and got freaked out.", "any", 2),
+    new FTEvent("C1 and C2 told some bad jokes to ease the mood.", "any", 2),
+    new FTEvent("C1, C2, and C3 shit talked Monokuma until he appeared out of nowhere and yelled at them.", "any", 3),
+    new FTEvent("C1 and C2 shared stories from their childhood.", "any", 2),
+    new FTEvent("C1 and C2 arm wrestled at [location]. C1 managed to beat C2!", "any", 2),
+    new FTEvent("C1 and C2 arm wrestled at [location]. C2 overcame C1!", "any", 2),
+    new FTEvent("C1 and C2 arm wrestled at [location]. They both struggled for 5 minutes before calling it a tie", "any", 2),
+    new FTEvent("C1 C2 and C3 hung out at [location] for a few hours.", "any", 3)
+];
+//When finished w/ events, search document for ’ and replace with '
 const allSettings = [
     new Setting("Hope's Peak Academy", "the entrance hall", [
         //Initially available areas
@@ -65,120 +67,161 @@ const allSettings = [
         ["the biology lab", "classroom 5 - A", "classroom 5 - B", "classroom 5 - C", "the martial arts dojo"],
         //Available after trial 5
         ["the old locker room", "the headmaster's private quarters", "the barricaded dorms", "the oddly intact dorm"]
-    ], [new FTEvent("C1 exercised alone in the gym.", "the gym", 1),
-    new FTEvent("C1 and C2 exercised together in the gym.", "the gym", 2),
-    new FTEvent("C1 admired the trophies in the trophy room on their way to the gym.", "the trophy room", 1),
-    new FTEvent("C1 played around with a gold leaf katana they found in the trophy room. They regretted it immediately after seeing the gold everywhere.", "the trophy room", 1),
-    new FTEvent("C1 had lunch with C2 and C3 in the cafeteria.", "the cafeteria", 3),
-    new FTEvent("C1, C2 and C3 tried to figure out how to open the door in the entrance hall.", "the entrace hall", 3),
-    new FTEvent("C1 looked for a movie to watch in the A/V room.", "the A/V room", 1),
-    new FTEvent("C1 scraped their knee, so C2 patched them up in the nurse's office.", "the nurse's office", 2),
-    new FTEvent("C1 explored classroom 1-A for clues, but didn't find anything...", "classroom 1 - A", 1),
-    new FTEvent("C1 explored classroom 1-A with C2, but they couldn't find any clues...", "classroom 1 - A", 2),
-    new FTEvent("C1 explored classroom 1-B for clues, but didn't find anything...", "classroom 1 - B", 1),
-    new FTEvent("C1 explored classroom 1-B with they C2, but didn't find any clues...", "classroom 1 - B", 2),
-    new FTEvent("C1 wanted to write a letter to C2, and searched the storage room for stationary.", "the storage room", 1), //Since C2 should still be able to do things, the numCHaracters is set to 1 (which is addressed in the doFTE() function)
-    new FTEvent("C1 cleaned their room, and took the trash to the incinerator.", "the incinerator", 1),
-    new FTEvent("C1 wanted to relax in the bath house, but saw C2 was there first and got embarrassed", "the bath house", 2),
-    new FTEvent("C1 lost a bet to C2 and had to do their laundry.", "the laundry room", 2),
-    new FTEvent("C1 made themselves lunch in the kitchen.", "the kitchen", 1),
+    ], [
+        new FTEvent("C1 exercised alone in the gym.", "the gym", 1),
+        new FTEvent("C1 and C2 exercised together in the gym.", "the gym", 2),
+        new FTEvent("C1 admired the trophies in the trophy room on their way to the gym.", "the trophy room", 1),
+        new FTEvent("C1 played around with a gold leaf katana they found in the trophy room. They regretted it immediately after seeing the gold everywhere.", "the trophy room", 1),
+        new FTEvent("C1 had lunch with C2 and C3 in the cafeteria.", "the cafeteria", 3),
+        new FTEvent("C1, C2 and C3 tried to figure out how to open the door in the entrance hall.", "the entrance hall", 3),
+        new FTEvent("C1 looked for a movie to watch in the A/V room.", "the A/V room", 1),
+        new FTEvent("C1 scraped their knee, so C2 patched them up in the nurse's office.", "the nurse's office", 2),
+        new FTEvent("C1 explored classroom 1-A for clues, but didn't find anything...", "classroom 1 - A", 1),
+        new FTEvent("C1 explored classroom 1-A with C2, but they couldn't find any clues...", "classroom 1 - A", 2),
+        new FTEvent("C1 explored classroom 1-B for clues, but didn't find anything...", "classroom 1 - B", 1),
+        new FTEvent("C1 explored classroom 1-B with they C2, but didn't find any clues...", "classroom 1 - B", 2),
+        new FTEvent("C1 wanted to write a letter to C2, and searched the storage room for stationary.", "the storage room", 1), //Since C2 should still be able to do things, the numCHaracters is set to 1 (which is addressed in the doFTEvent() function)
+        new FTEvent("C1 cleaned their room, and took the trash to the incinerator.", "the incinerator", 1),
+        new FTEvent("C1 wanted to relax in the bath house, but saw C2 was there first and got embarrassed", "the bath house", 2),
+        new FTEvent("C1 lost a bet to C2 and had to do their laundry.", "the laundry room", 2),
+        new FTEvent("C1 made themselves lunch in the kitchen.", "the kitchen", 1),
 
-    new FTEvent("C1 investigated the locker rooms with C2.", "the girls locker room", 2),//Doesn't matter which room since they are both available at the same time
-    new FTEvent("C1 decided to go for a swim, and got water in their nose.", "the swimming pool", 1),
-    new FTEvent("C1 decided to go for a swim, and practiced holding their breath underwater.", "the swimming pool", 1),
-    new FTEvent("C1 and C2 raced each other in the swimming pool.", "the swimming pool", 2),
-    new FTEvent("C1 and C2 investigated classroom 2-A.", "classroom 2 - A", 2),
-    new FTEvent("C1 searched for clues in classroom 2-A alone.", "classroom 2 - A", 1),
-    new FTEvent("C1 and C2 investigated classroom 2-B.", "classroom 2 - B", 2),
-    new FTEvent("C1 searched for clues in classroom 2-B alone.", "classroom 2 - B", 1),
-    new FTEvent("C1 asked C2 to meet them privately in the library.", "the library", 2),
-    new FTEvent("C1 searched the archives for any clues about the school or Monokuma.", "the archives", 1),
-    new FTEvent("C1 and C2 searched the archives for any new information.", "the archives", 2),
-    new FTEvent("C1 and C2 searched the archives for any new information.", "the archives", 2),
+        new FTEvent("C1 investigated the locker rooms with C2.", "the girls locker room", 2),//Doesn't matter which room since they are both available at the same time
+        new FTEvent("C1 decided to go for a swim, and got water in their nose.", "the swimming pool", 1),
+        new FTEvent("C1 decided to go for a swim, and practiced holding their breath underwater.", "the swimming pool", 1),
+        new FTEvent("C1 and C2 raced each other in the swimming pool.", "the swimming pool", 2),
+        new FTEvent("C1 and C2 investigated classroom 2-A.", "classroom 2 - A", 2),
+        new FTEvent("C1 searched for clues in classroom 2-A alone.", "classroom 2 - A", 1),
+        new FTEvent("C1 and C2 investigated classroom 2-B.", "classroom 2 - B", 2),
+        new FTEvent("C1 searched for clues in classroom 2-B alone.", "classroom 2 - B", 1),
+        new FTEvent("C1 asked C2 to meet them privately in the library.", "the library", 2),
+        new FTEvent("C1 searched the archives for any clues about the school or Monokuma.", "the archives", 1),
+        new FTEvent("C1 and C2 searched the archives for any new information.", "the archives", 2),
+        new FTEvent("C1 and C2 searched the archives for any new information.", "the archives", 2),
 
-    new FTEvent("C1 searched classroom 3-A for clues.", "classroom 3 - A", 1),
-    new FTEvent("C1 joined C2 in searching classroom 3-A for clues.", "classroom 3 - A", 2),
-    new FTEvent("C1 explored classroom 3-B head-to-toe by themselves.", "classroom 3 - B", 1),
-    new FTEvent("C1 looked in classroom 3-B and found C2 also searching there.", "classroom 3 - B", 2),
-    new FTEvent("C1 tried to figure out the strange machines in the physics lab, with no luck.", "the physics lab", 1),
-    new FTEvent("C1 managed to turn on one of the machines in the physics lab, but it didn't seem to do anything...", "the physcis lab", 1),
-    new FTEvent("C1 stashed something in the lab storage room...", "the lab storage room", 1),
-    new FTEvent("C1 and C2 had a painting competition in the art room. C1 won!", "the art room", 2),
-    new FTEvent("C1 and C2 had a painting competition in the art room. C2 won!", "the art room", 2),
-    new FTEvent("C1 and C2 had a painting competition in the art room. It was a tie.", "the art room", 2),
-    new FTEvent("C1 and C2 had a sculpting competition in the art room. C1 won!", "the art room", 2),
-    new FTEvent("C1 and C2 had a sculpting competition in the art room. C2 won!", "the art room", 2),
-    new FTEvent("C1 and C2 had a sculpting competition in the art room. It was a tie", "the art room", 2),
-    new FTEvent("C1 made wax stamps with supplies they found in the art storage room.", "the art storage room", 1),
-    new FTEvent("C1 made a clay figurine with supplies they found in the art storage room.", "the art storage room", 1),
-    new FTEvent("C1 played pool against C2 in the rec room. C1 won!", "the rec room", 2),
-    new FTEvent("C1 played pool against C2 in the rec room. C2 won!", "the rec room", 2),
+        new FTEvent("C1 searched classroom 3-A for clues.", "classroom 3 - A", 1),
+        new FTEvent("C1 joined C2 in searching classroom 3-A for clues.", "classroom 3 - A", 2),
+        new FTEvent("C1 explored classroom 3-B head-to-toe by themselves.", "classroom 3 - B", 1),
+        new FTEvent("C1 looked in classroom 3-B and found C2 also searching there.", "classroom 3 - B", 2),
+        new FTEvent("C1 tried to figure out the strange machines in the physics lab, with no luck.", "the physics lab", 1),
+        new FTEvent("C1 managed to turn on one of the machines in the physics lab, but it didn't seem to do anything...", "the physics lab", 1),
+        new FTEvent("C1 stashed something in the lab storage room...", "the lab storage room", 1),
+        new FTEvent("C1 and C2 had a painting competition in the art room. C1 won!", "the art room", 2),
+        new FTEvent("C1 and C2 had a painting competition in the art room. C2 won!", "the art room", 2),
+        new FTEvent("C1 and C2 had a painting competition in the art room. It was a tie.", "the art room", 2),
+        new FTEvent("C1 and C2 had a sculpting competition in the art room. C1 won!", "the art room", 2),
+        new FTEvent("C1 and C2 had a sculpting competition in the art room. C2 won!", "the art room", 2),
+        new FTEvent("C1 and C2 had a sculpting competition in the art room. It was a tie", "the art room", 2),
+        new FTEvent("C1 made wax stamps with supplies they found in the art storage room.", "the art storage room", 1),
+        new FTEvent("C1 made a clay figurine with supplies they found in the art storage room.", "the art storage room", 1),
+        new FTEvent("C1 played pool against C2 in the rec room. C1 won!", "the rec room", 2),
+        new FTEvent("C1 played pool against C2 in the rec room. C2 won!", "the rec room", 2),
 
-    new FTEvent("C1 tried to compose a song in the music room.", "the music room", 1),
-    new FTEvent("C1 put on a concert for C2 and C3 in the music room.", "the music room", 3),
-    new FTEvent("C1 put on a concert in the music room, but nobody showed up...", "the music room", 3),
-    new FTEvent("C1 and C2 tried to break into the headmaster's office, to no avail.", "the headmaster's office", 2),
-    new FTEvent("C1 and C2 tried to break into the headmaster's office, but Monokuma showed up and yelled at them.", "the headmaster's office", 2),
-    new FTEvent("C1 stole a fake plant from the faculty office.", "the faculty office", 1),
-    new FTEvent("C1 tried to hack the computers in the faculty office, but they turned out to be fake.", "the faculty office", 1),
-    new FTEvent("C1 spent some time fiddling with the computers in the data center.", "the data center", 1),
-    new FTEvent("C1 scrawled something rude about C2 on the chalkboard in classroom 4-A.", "classroom 4 - A", 1),
-    new FTEvent("C1 searched classroom 4-B for clues, but only found a self-portrait done by Monokuma.", "classroom 4 - B", 1),
-    new FTEvent("C1 showed C2 how to make salt crystals in the chemistry lab.", "the chemistry lab", 2),
-    new FTEvent("C1 visited the chemistry lab to try and make alcohol, but set it on fire.", "the chemistry lab", 1),
-    new FTEvent("C1 visited the chemistry lab to try and make alcohol, but was caught by C2.", "the chemistry lab", 2),
-    new FTEvent("C1 visited the chemistry lab to try and make alcohol, but was caught by Monokuma.", "the chemistry lab", 1),
+        new FTEvent("C1 tried to compose a song in the music room.", "the music room", 1),
+        new FTEvent("C1 put on a concert for C2 and C3 in the music room.", "the music room", 3),
+        new FTEvent("C1 put on a concert in the music room, but nobody showed up...", "the music room", 3),
+        new FTEvent("C1 and C2 tried to break into the headmaster's office, to no avail.", "the headmaster's office", 2),
+        new FTEvent("C1 and C2 tried to break into the headmaster's office, but Monokuma showed up and yelled at them.", "the headmaster's office", 2),
+        new FTEvent("C1 stole a fake plant from the faculty office.", "the faculty office", 1),
+        new FTEvent("C1 tried to hack the computers in the faculty office, but they turned out to be fake.", "the faculty office", 1),
+        new FTEvent("C1 spent some time fiddling with the computers in the data center.", "the data center", 1),
+        new FTEvent("C1 scrawled something rude about C2 on the chalkboard in classroom 4-A.", "classroom 4 - A", 1),
+        new FTEvent("C1 searched classroom 4-B for clues, but only found a self-portrait done by Monokuma.", "classroom 4 - B", 1),
+        new FTEvent("C1 showed C2 how to make salt crystals in the chemistry lab.", "the chemistry lab", 2),
+        new FTEvent("C1 visited the chemistry lab to try and make alcohol, but set it on fire.", "the chemistry lab", 1),
+        new FTEvent("C1 visited the chemistry lab to try and make alcohol, but was caught by C2.", "the chemistry lab", 2),
+        new FTEvent("C1 visited the chemistry lab to try and make alcohol, but was caught by Monokuma.", "the chemistry lab", 1),
 
-    new FTEvent("C1 and C2 had a contest to see who could stand the cold in the biology lab the longest.", "the biology lab", 1),
-    new FTEvent("C1 paid their respects to the bodies being kept in the morgue.", "the biology lab", 1),
-    new FTEvent("C1 and C2 trained in the martial arts dojo.", "the martial arts dojo", 2),
-    new FTEvent("C1 and C2 sparred in the martial arts dojo.", "the martial arts dojo", 2),
-    new FTEvent("C1 and C2 both searched for clues in classroom 5-A.", "classroom 5 - A", 2),
-    new FTEvent("C1 looked for clues in classroom 5-A.", "classroom 5 - A", 1),
-    new FTEvent("C1 practiced their signature on the chalkboard in classroom 5-B.", "classroom 5 - B", 1),
-    new FTEvent("C1 threw up trying to investigate classroom 5-C.", "classroom 5 - C", 1),
-    new FTEvent("C1 investigated classroom 5-C to try and figure out what happened.", "classroom 5 - C", 1),
+        new FTEvent("C1 and C2 had a contest to see who could stand the cold in the biology lab the longest.", "the biology lab", 1),
+        new FTEvent("C1 paid their respects to the bodies being kept in the morgue.", "the biology lab", 1),
+        new FTEvent("C1 and C2 trained in the martial arts dojo.", "the martial arts dojo", 2),
+        new FTEvent("C1 and C2 sparred in the martial arts dojo.", "the martial arts dojo", 2),
+        new FTEvent("C1 and C2 both searched for clues in classroom 5-A.", "classroom 5 - A", 2),
+        new FTEvent("C1 looked for clues in classroom 5-A.", "classroom 5 - A", 1),
+        new FTEvent("C1 practiced their signature on the chalkboard in classroom 5-B.", "classroom 5 - B", 1),
+        new FTEvent("C1 threw up trying to investigate classroom 5-C.", "classroom 5 - C", 1),
+        new FTEvent("C1 investigated classroom 5-C to try and figure out what happened.", "classroom 5 - C", 1),
 
-    new FTEvent("C1 found some of C2's belongings in the old locker room, but C2 claimed not to recognize them.", "the old locker room", 2),
-    new FTEvent("C1 searched for answers in the headmaster's private quarters, but only found old family photos.", "the headmaster's private quarters", 1),
-    new FTEvent("C1 helped C2 try to enter one of the barricaded dorms on the second floor.", "the barricaded dorms"),
-    new FTEvent("C1 tried to find clues in the oddly intact dorm.", "the oddly intact dorm", 1),
-    new FTEvent("C1 found C2 searching the headmaster's private quarters", "the headmaster's private quarters", 2)
+        new FTEvent("C1 found some of C2's belongings in the old locker room, but C2 claimed not to recognize them.", "the old locker room", 2),
+        new FTEvent("C1 searched for answers in the headmaster's private quarters, but only found old family photos.", "the headmaster's private quarters", 1),
+        new FTEvent("C1 helped C2 try to enter one of the barricaded dorms on the second floor.", "the barricaded dorms"),
+        new FTEvent("C1 tried to find clues in the oddly intact dorm.", "the oddly intact dorm", 1),
+        new FTEvent("C1 found C2 searching the headmaster's private quarters", "the headmaster's private quarters", 2)
     ]),
 
     new Setting("Jabberwock Island", "Jabberwock Park", [
         ["Jabberwock Park", "Monokuma Rock", "the first island", "the beach", "the airport", "Rocketpunch Market", "Usami Corral",
-            "Hotel Mirai", "the hotel lobby", "the hotel restaurant", "the hotel's old building"],
+            "Hotel Mirai", "the hotel lobby", "the hotel restaurant", "the hotel's old building", "the swimming pool"],
         ["the pharmacy", "the ancient ruins", "the library", "the diner", "Chandler Beach", "the beach house"],
         ["the hospital lobby", "the hospital", "the Titty Typhoon", "the motel", "Electric Ave.", "the movie theater"],
         ["the haunted house", "Nezumi Castle", "the rollercoaster", "the Funhouse"],
         ["Jabberwock Military Base", "the plushie factory", "the warehouse", "Vendor Street", "Sea King Industries"],
         ["Hope's Peak Academy"]
-    ], [new FTEvent("C1 took a walk on the beach, holding hands with C2.","",),
-new FTEvent("C1 took a walk on the beach with C2.","",),
-new FTEvent("C1 took a walk on the beach by themself.","",),
-new FTEvent("C1, C2 and C3 played hide - and - seek in Jabberwock Park.","",),
-new FTEvent("C1 and C2 had a picnic in Jabberwock Park.","",),
-new FTEvent("C1 spent some time exploring the first island.","",),
-new FTEvent("C1 and C2 teamed up  to search the first island for clues.","",),
-new FTEvent("C1 tried to climb Monokuma Rock.","",),
-new FTEvent("C1 and C2 tried to fly some of the planes at the airport.","",),
-new FTEvent("C1 raided the vending machines at the airport.","",),
-new FTEvent("C1 got some supplies at Rocketpunch Market.","",),
-new FTEvent("C1 grabbed lots of gummy worms from Rocketpunch Market.","",),
-new FTEvent("C1 and C2 hung out at Usami Corral, and looked at the animals.","",),
-new FTEvent("C1 spent some time alone with the animals at Usami Corral.","",),
-new FTEvent("C1 played video games on the arcade machine in the hotel lobby.","",),
-new FTEvent("C1 played against C2 on the arcade machine in the hotel lobby.C1 won!","",),
-new FTEvent("C1 played against C2 on the arcade machine in the hotel lobby.C2 won!","",),
-new FTEvent("C1 ate alone in the hotel restaurant.","",),
-new FTEvent("C1 and C2 met for lunch in the hotel restaurant.","",),
-new FTEvent("C1, C2 and C3 met for lunch in the hotel restaurant.","",),
-new FTEvent("C1 went swimming at Hotel Marai to clear their head.","",),
-new FTEvent("C1, C2 and C3 hung out at Hotel Marai for a few hours.","",),
-new FTEvent("C1 and C2 went swimming at Hotel Marai.","",),
-new FTEvent("C1 volunteered to clean the old hotel building, and looked for clues while they did.","",),
-new FTEvent("C1 and C2 looked for clues in the old hotel building.","",)
+    ], [
+        new FTEvent("C1 took a walk on the beach, holding hands with C2.", "the beach", 2),
+        new FTEvent("C1 took a walk on the beach with C2.", "the beach", 2),
+        new FTEvent("C1 took a walk on the beach by themself.", "the beach", 1),
+        new FTEvent("C1, C2 and C3 played hide-and-seek in Jabberwock Park.", "Jabberwock Park", 3),
+        new FTEvent("C1 and C2 had a picnic in Jabberwock Park.", "Jabberwock Park", 2),
+        new FTEvent("C1 spent some time exploring the first island.", "the first island", 1),
+        new FTEvent("C1 and C2 teamed up to search the first island for clues.", "the first island", 2),
+        new FTEvent("C1 tried to climb Monokuma Rock.", "Monokuma Rock", 1),
+        new FTEvent("C1 tried to break into Monokuma Rock.", "Monokuma Rock", 1),
+        new FTEvent("C1 and C2 tried to fly some of the planes at the airport.", "the airport", 2),
+        new FTEvent("C1 raided the vending machines at the airport.", "the airport", 1),
+        new FTEvent("C1 got some supplies at Rocketpunch Market.", "Rocketpunch Market", 1),
+        new FTEvent("C1 grabbed lots of gummy worms from Rocketpunch Market.", "Rocketpunch Market", 1),
+        new FTEvent("C1 and C2 hung out at Usami Corral, and looked at the animals.", "Usami Corral", 2),
+        new FTEvent("C1 spent some time alone with the animals at Usami Corral.", "Usami Corral", 1),
+        new FTEvent("C1 played video games on the arcade machine in the hotel lobby.", "the hotel lobby", 1),
+        new FTEvent("C1 played against C2 on the arcade machine in the hotel lobby.C1 won!", "the hotel lobby", 2),
+        new FTEvent("C1 played against C2 on the arcade machine in the hotel lobby.C2 won!", "the hotel lobby", 2),
+        new FTEvent("C1 ate alone in the hotel restaurant.", "the hotel restaurant", 1),
+        new FTEvent("C1 and C2 met for lunch in the hotel restaurant.", "the hotel restaurant", 2),
+        new FTEvent("C1, C2 and C3 met for lunch in the hotel restaurant.", "the hotel restaurant",),
+        new FTEvent("C1 went swimming at Hotel Mirai to clear their head.", "the swimming pool", 1),
+        new FTEvent("C1 and C2 went swimming at Hotel Mirai.", "the swimming pool", 2),
+        new FTEvent("C1 volunteered to clean the old hotel building, and looked for clues while they did.", "the hotel's old building", 1),
+        new FTEvent("C1 and C2 looked for clues in the old hotel building.", "the hotel's old building", 2),
+        new FTEvent("C1, C2, C3, and C4 played 'Star' in the pool.", "the swimming pool", 4),
+        new FTEvent("C1 sunbathed out by the pool.", "the swimming pool", 1),
+        new FTEvent("C1 and C2 tanned by the pool.", "the swimming pool", 2),
+        new FTEvent("C1 and C2 tanned by the pool. C1 laughed at C2's sunburn afterwards.", "Hotel Mirai", 2),
+        new FTEvent("C1 was chased by a wasp.", "any", 1),
+        new FTEvent("C1 and C2 tried to break open a coconut to get its milk.", "any", 2),
+        new FTEvent("C1 went combing for seashells.", "the beach", 1),
+        new FTEvent("C1 went swimming in the ocean.", "any", 1),
+        new FTEvent("C1 complained about sand to C2. Were they making a Star Wars reference?", "any", 2),
+
+
+        new FTEvent("C1 was feeling unwell, and checked the pharmacy for some medicine.", "the pharmacy", 1),
+        new FTEvent("C1 grabbed some sleep medicine from the pharmacy.", "the pharmacy", 1),
+        new FTEvent("C1 and C2 tried to enter the ancient ruins, to no avail.", "the ancient ruins", 2),
+        new FTEvent("C1 tried guessing the password to the ruins, but couldn't get in.", "the ancient ruins", 1),
+        new FTEvent("C1 researched the island in the library.", "the library", 1),
+        new FTEvent("C1 met C2 reading in the library.", "the library", 2),
+        new FTEvent("C1 and C2 met at the diner for a private conversation.", "the diner", 1),
+        new FTEvent("C1 cooked up burgers for C2 and C3 in the diner.", "the diner", 3),
+        new FTEvent("C1 went sunbathing on Chandler Beach, and got a nice tan.", "Chandler Beach", 1),
+        new FTEvent("C1 went sunbathing on Chandler Beach, and got a sunburn.", "Chandler Beach", 1),
+        new FTEvent("C1 and C2 went surfing on Chandler Beach.", "Chandler Beach", 2),
+        new FTEvent("C1 took a nap in the beach house.", "the beach house", 1),
+        new FTEvent("C1 went to the beach house to try and wash off sand from the beach, but the shower wasn't working.", "the beach house", 1),
+
+        new FTEvent("C1 took a nap in one of the hospital beds.", "the hospital", 1),
+        new FTEvent("C1 dressed up in doctor's clothes they found in the hospital.", "the hospital", 1),
+        new FTEvent("C1 searched the hospital for medicine.", "the hospital", 1),
+        new FTEvent("C1 and C2 had a drink at the Titty Typhoon.", "the Titty Typhoon", 2),
+        new FTEvent("C1 put on a concert at the Titty Typhoon.", "the Titty Typhoon", 1),
+        new FTEvent("C1 and C2 spent an hour laughing at the name 'Titty Typhoon'.", "the Titty Typhoon", 2),
+        new FTEvent("C1 locked themselves in a motel room to get some privacy.", "the motel", 1),
+        new FTEvent("C1 became paranoid of C2 and hid in a motel room.", "the motel", 2),
+        new FTEvent("C1 looked for parts to build a robot in Electric Ave.", "Electric Ave.", 1),
+        new FTEvent("C1 tried to reach the mainland using radio parts they found in Electric Ave.", "Electric Ave.", 1),
+        new FTEvent("C1 and C2 saw a movie together.", "the movie theater", 2),
+        new FTEvent("C1, C2 and C3 went to see a movie together.", "the movie theater", 3),
+        new FTEvent("C1 decided to go see a movie by themself.", "the movie theater", 1)
+
     ]),
 
     new Setting("The Ultimate Academy for Gifted Juveniles", "the gym", [
@@ -193,6 +236,27 @@ new FTEvent("C1 and C2 looked for clues in the old hotel building.","",)
     ],
         [])
 ];
+//Double checking I didn't forget any locations for a FTEvent
+//This is probably not performance friendly and I may remove this part when the site is done
+for (let i = 0; i < allSettings.length; i++) {
+    let _setting = allSettings[i];
+    for (let j = 0; j < _setting.FTEvents.length; j++) {
+        let _event = _setting.FTEvents[j];
+        let _areaIsValid = false;
+        let _area = _event.area;
+        if (_area == "any") {
+            continue;
+        }
+        for (let k = 0; k < _setting.areas.length; k++) {
+            if (_setting.areas[k].indexOf(_area) != -1) {
+                _areaIsValid = true;
+            }
+        }
+        if (!_areaIsValid) {
+            console.warn("Invalid area for free time event: \nSetting: " + _setting.name + "\nText: " + _event.text + "\nArea: " + _area);
+        }
+    }
+}
 //Defining arrays of all characters and settings.
 const allCharacters = [
     //THH Characters
