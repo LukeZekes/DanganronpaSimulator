@@ -198,7 +198,8 @@ function nextDay() {
     dailyAreas = [];
     window.scrollTo(0, 0);
     if (day == 4) {
-        for (let i = 0; i < Math.random() * 3; i++) {
+        let _n = Math.random() * 3; //How many FTEvents are done before the murder
+        for (let i = 0; i < _n; i++) {
             doFTEvent();
         }
         doMurder();
