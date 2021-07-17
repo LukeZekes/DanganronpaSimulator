@@ -32,8 +32,12 @@
             }
             return (path + tempStr + ".png");
         }
-        //Add each character's picture and name as list items to the #characterList element
+        //Add headmaster's name and picture
         let characterList = document.getElementById('characterList');
+        let headmaster = JSON.parse(sessionStorage.getItem("headmaster"));
+        characterList.innerHTML += "<li><img class=\"characterImage\" src=\'" + getImageSource(headmaster) +
+            "\' alt=\'" + headmaster + "\'/> <br />" + headmaster + "</li><br />";
+        //Add each character's picture and name as list items to the #characterList element
         let currentCharacters = JSON.parse(sessionStorage.getItem('currentCharacters'));
         for (let i = 0; i < currentCharacters.length; i++) {
             characterList.innerHTML += "<li><img class=\"characterImage\" src=\'" + getImageSource(currentCharacters[i].name) +

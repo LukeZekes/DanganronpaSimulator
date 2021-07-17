@@ -3,6 +3,10 @@
     src: local(platform_eight), url(platform_eight/platform_eight.ttf);
 }
 
+:root {
+    --bloodCol: #F0509A;
+}
+
 body {
     background-color: #6f0000;
     font-family: PlatformEight;
@@ -96,7 +100,7 @@ h2.sectionHeader {
 }
 
 .death {
-    color: #F0509A;
+    color: var(--bloodCol);
     font-weight: bold;
 }
 
@@ -117,6 +121,17 @@ ul#characterList {
         margin-right: 15px;
         width: 250px;
     }
+
+ul.bodyDesc li {
+    list-style-position: outside;
+    font-style: italic;
+    text-align: left;
+}
+
+    ul.bodyDesc li::marker {
+        color: var(--bloodCol);
+    }
+
 
 img.characterImage {
     width: 112px;

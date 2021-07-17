@@ -1,6 +1,9 @@
 Motives
 Murders
 Investigations
+	-Description of body
+	-Variations on "decided to investigate the body" - including support and antag? (based on who is alive/dead?)
+	-Investigating rooms
 Trials
 Random free time events (both location-dependent and independent)
 	-Make sure the only ultimate labs available as locations are ones for living students, that have been unlocked
